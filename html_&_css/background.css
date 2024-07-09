@@ -1,0 +1,29 @@
+section {
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    /* background-image: url("https://images.unsplash.com/photo-1514477917009-389c76a86b68?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreXxlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover; */
+    /*cover表盡可能去覆蓋，圖片小就放大，圖片大就裁減等*/
+
+    /* background-size: contain; */
+    /*contain表沒有進行放大縮小*/
+
+    /*background-position: top;  */
+    /*決定從圖片的哪裡當開始top就是上面buttom就是下面*/
+
+    /* background: center/cover url("https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80"); */
+    /*寫在一起必須遵守：potision/size，ex：center/cover*/
+
+    background: center/20% no-repeat url(https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80) blueviolet;
+    /*位置/大小 不要重複 url 背景顏色*/
+}
+
+h1 {
+    font-size: 150px;
+    /* text-align: center;
+    text-shadow: black -6px 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter; */
+    color: white;
+}

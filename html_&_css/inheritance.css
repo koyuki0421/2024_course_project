@@ -1,0 +1,22 @@
+/*最外面的指示，通稱"父母級別"*/
+body {
+    color: purple;
+}
+
+/*section會比boby裡面，所以會壓過body的指示，
+表section裡面的會變成亮藍色*/
+section {
+    color: aqua;
+}
+
+/*form也同上邏輯，會壓過section指示*/
+form {
+    color: greenyellow;
+}
+
+/*inherit表繼承，繼承上面form的指示，
+不然原本button不會照form的指示*/
+button,
+input {
+    color: inherit;
+}

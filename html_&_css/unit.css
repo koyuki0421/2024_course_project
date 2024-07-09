@@ -1,0 +1,83 @@
+section {
+    width: 800px;
+    height: 800px;
+    background-color: gray;
+}
+
+div {
+    width: 50%;
+    height: 50%;
+    background-color: palevioletred;
+    /*這邊個寬跟高使用"%"，
+    表示div要佔父元素(section)的50%*/
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+    /*line-height表示的是自己本身的高，不是關於父元素的，
+    且用px也可以，像是200%=80px*/
+}
+
+
+#ems article {
+    font-size: 30px;
+}
+
+#ems h2 {
+    font-size: 4em;
+    /*em表示根據父元素去做大小變化，
+    2em表示父元素(article)的2倍=60px*/
+    margin-left: 1em;
+    /*這邊的margin-left指的是根據h2本身字大小進行變化，
+    而不是根據父元素了!!!*/
+}
+
+#ems h3 {
+    font-size: 1.5em;
+}
+
+#ems p {
+    font-size: 1em;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    /* font-size: 30px;
+    padding: 0 30px;
+    border-radius: 15px; */
+    /*上面若改font-size，圖形會變，
+    所以若想要圖形維持並等比例放大的話，用em(下面)*/
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    /*會根據父元素(article)的大小進行改變且圖形不變\*/
+}
+
+/* ul {
+    font-size: 1.5em;
+} */
+/*如果是上面那樣的話，越裡面的ul、li會越大，
+因為是根據上一層(父元素)進行變化，
+最外面根據article*1.5；li根據ul再*1.5，以此類推*/
+
+/*若使用rem就不會有雪球效應(上述問題了)，
+rem是根據"根元素"(html預設字大小)改變，
+因此也可以改變根元素大小(如下)*/
+html {
+    font-size: 30px;
+}
+
+#rems h2 {
+    font-size: 3rem;
+}
+
+#rems h3 {
+    font-size: 2rem;
+}
+
+#rems ul {
+    font-size: 1.5rem;
+}

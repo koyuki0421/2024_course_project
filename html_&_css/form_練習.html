@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form_練習</title>
+</head>
+
+<body>
+    <h1>Race Registration!</h1>
+    <form action="/demmy">
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" name="first" id="first" required>
+            <label for="last">Last Name</label>
+            <input type="text" name="last" id="last" required>
+        </div>
+        <div>
+            <p>
+                Select a Race:
+            </p>
+            <input type="radio" name="select" id="fun" value="fun"> <!--必須加value這樣再送出去的url才會顯示說明使用者點了哪一個-->
+            <label for="fun">Fun Run 5k</label>
+            <br>
+            <input type="radio" name="select" id="half" value="half"> <!--必須加value這樣再送出去的url才會顯示說明使用者點了哪一個-->
+            <label for="half">Half Marathon</label>
+            <br>
+            <input type="radio" name="select" id="full" value="full"> <!--必須加value這樣再送出去的url才會顯示說明使用者點了哪一個-->
+            <label for="full">Full Marathon</label>
+        </div>
+        <div>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <label for="age">Select Age Group</label>
+            <select name="age" id="age">
+                <option value="under 18">under 18</option>
+                <option value="18-30">18-30</option>
+                <option value="31-50">31-50</option>
+                <option value="50+">50+</option>
+            </select>
+        </div>
+        <button>Register!</button>
+    </form>
+</body>
+
+</html>

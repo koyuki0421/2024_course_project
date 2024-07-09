@@ -1,0 +1,130 @@
+/* * {
+    background-color: cyan;
+}這個是全選 */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+h1,
+h2 {
+    color: #1d3557;
+}
+
+/*加了id後的css寫法：只選擇signup button*/
+#signup {
+    background-color: #8624a9;
+    color: #f1faee;
+}
+
+span {
+    color: #457b9d;
+}
+
+/*class的css*/
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+/*在class='post'中的a*/
+/*也可以寫成:span a{}*/
+.post a {
+    color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
+    /*把原本的底線用掉*/
+}
+
+/*在footer裡的a*/
+footer a {
+    color: #e63946;
+}
+
+/*在h2裡面的button*/
+h2+button {
+    font-size: 20px;
+}
+
+/*直系的概念，與footer同一直線下來的只有a href=...，
+所以可以使用 > 此符號*/
+footer>a {
+    color: #457b9d;
+}
+
+/*這是針對type的*/
+input[type="password"] {
+    color: greenyellow;
+}
+
+/*下面寫法是針對class的
+ .password {
+    color: #c8323a;
+} */
+
+/* 較常寫法： 
+a[href="www.google.com"] {
+    color: #1d3557;
+}*/
+a[href*="google"] {
+    color: #1d3557;
+}
+
+/*在post裡面的a，當滑鼠停在上面時會underline*/
+.post a:hover {
+    text-decoration: underline;
+}
+
+/*在post裡面button，當滑鼠點擊在上面時會改顏色*/
+.post button:active {
+    background-color: #e5ee3e;
+}
+
+/*(3)表第3個變顏色、(3n)表3的倍數的變顏色369..等*/
+.post:nth-of-type(2n) {
+    background-color: #dfe8dc;
+}
+
+/*兩個::是偽元素的意思，下面表第一個字的字母大50px*/
+h2::first-letter {
+    font-size: 50px;
+}
+
+/*表第一行的字變顏色*/
+p::first-line {
+    color: rgb(236, 90, 32);
+}
+
+/*當選取的時候，會變顏色；若是寫成::selection就表示不僅僅是p而已，
+任何選起來的地方都會變顏色*/
+p::selection {
+    background-color: #fcbf49;
+}
+
+/*hover=懸停的意思*/
+.post button:hover {
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+/*上面的比下面的具體，所以上面的會贏，
+表在post裡面的button還是會依照上面的指示去執行*/
+button:hover {
+    background-color: olive;
+}
+
+/*上述情況叫specificity特異性，
+順序：ID>class>element*/
+
+/*有兩個東西會忽略特異性，直接獲勝：
+第一個是inline style，直接寫在html裡面(這不好)；
+第二個是下面的!important*/
+button {
+    background-color: magenta !important;
+}

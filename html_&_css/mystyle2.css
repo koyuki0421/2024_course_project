@@ -1,0 +1,7 @@
+/*前面做的h1h2變顏色的事情，
+都會因下面這個code被覆蓋，
+因為mystyle2.css是第二個連結*/
+h1,
+h2 {
+    color: olivedrab;
+}

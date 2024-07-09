@@ -1,0 +1,125 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ul,
+li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    border: 1px solid red;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* @media(width:800px) { */
+/*指剛好螢幕畫面(頁面)寬度=800px時，字會變紫色*/
+
+/* h1 {
+        color: purple;
+    } */
+/* } */
+
+/* @media(min-width:800px) { */
+/*只800px以上的話字都是紫色*/
+/* 
+    h1 {
+        color: purple;
+    } */
+/* } */
+
+/* @media(min-width:600px)and (max-width:800px) { */
+/*只600~800px之間的字是紫色的*/
+/* h1 {
+        color: purple;
+    } */
+/* } */
+
+/*下面先黃再橘再紅是有順序可言的，
+因為如果倒過來，500px和1000px會被1500px吃掉*/
+/* @media(max-width:1500px) {
+    h1 {
+        color: yellow;
+    }
+}
+
+@media(max-width:1000px) {
+    h1 {
+        color: orange;
+    }
+}
+
+@media(max-width:500px) {
+    h1 {
+        color: red;
+    }
+} */
+
+/*下面這樣寫就沒有順序可言了*/
+h1 {
+    color: red;
+}
+
+@media(min-width:500px) {
+    h1 {
+        color: orange;
+    }
+}
+
+@media(min-width:1000px) {
+    h1 {
+        color: yellow;
+    }
+}
+
+@media(min-width:1500px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* @media(orientation: landscape) { */
+
+/*表當我螢幕變橫向的時候，背影會變色*/
+/* body {
+        background-color: magenta;
+    } */
+/* } */
+
+@media(max-width:768px) {
+    /*當寬度在768px以下時，字變4em*/
+
+    h1 {
+        font-size: 4em;
+    }
+
+    nav,
+    nav ul {
+        flex-direction: column;
+        /*彎曲方向列：橫向*/
+        align-items: center;
+    }
+}
+
+@media(max-width:576px) {
+    h1 {
+        font-size: 3em;
+    }
+}

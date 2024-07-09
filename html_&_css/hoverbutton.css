@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #151b49;
+    /* transition: all 0.25s; */
+    /*全部在0.25s完成*/
+    transition: border-color 0.25s, color 0.25s, ox-shadow 0.25s, transform0.25s;
+    /*一個一個寫*/
+}
+
+button {
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+}
+
+button:hover {
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    /*shadow表X軸、Y軸、模糊、傳播'顏色*/
+    transform: translateY(-0.25em);
+    cursor: pointer;
+    /*把游標變成指標(說這樣可以互動、更清楚)*/
+}

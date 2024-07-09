@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+
+    <!--表單作法-->
+    <!--全部打完送出長這樣：file:///C:/tacos?username=koyuki&password=123&color=%23bd37d7&num=41-->
+
+    <form action="/tacos"> <!--當表單送出去要到達的目的地-->
+
+        <!--label for輸入什麼，input id就輸什麼，才會有聯繫--> <!--有兩種做法，上面那一種比較好-->
+        <p>
+            <label for="username">Enter a username:</label>
+            <input id="username" type="test" placeholder="username" name="username"> <!--placeholder是提示使用者要輸入什麼的功能-->
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input id="password" type="password" placeholder="password" name="password">
+        </p>
+        <p>
+            <label> Enter a color:
+                <input type="color" name="color">
+            </label>
+
+        </p>
+        <p>
+            <label>Enter a number:
+                <input type="number" placeholder="number" name="num" min="1" max="100">
+            </label>
+        </p>
+
+        <!--把type換成button，就不會進行提交的動作-->
+        <button type="button">Regular button (won't submit)</button>
+        <!--這是一個會提交的button-->
+        <button>submit</button>
+        <!--把type換成submit，就會進行提交-->
+        <input type="submit" value="Click me"></button>
+
+    </form>
+    <!--因為不再form裡面，所以不會提交-->
+    <button>Not inside Form</button>
+
+
+
+    <!--以下示範查詢後連到真正的URL-->
+    <!--input的name是根據URL的網址所決定-->
+    <h2>Hikoyuki Searthes</h2>
+    <h3>Searth reddit</h3>
+    <!--原本搜尋的URL：https://www.reddit.com/search/?q=reddit-->
+    <form action="https://www.reddit.com/search/">
+        <input type="text" name="q">
+        <button>Searth rebbit</button>
+    </form>
+    <h3>Searth google</h3>
+    <!--原本搜尋的URL：https://www.google.com/search?q=pizza-->
+    <form action="https://www.google.com/search">
+        <input type=" text" name="q">
+        <button>Searth Google</button>
+    </form>
+    <h3>Searth youtube</h3>
+    <!--原本搜尋的URL：https://www.youtube.com/results?search_query=sio-->
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Searth Youtube</button>
+    </form>
+
+
+    <h2>More Input!!!</h2>
+
+    <form action="/birds">
+
+        <!--勾選類型-->
+        <input type="checkbox" name="agree_tos" id="agree"> <!--input的id輸入什麼，label的for就輸入什麼-->
+        <label for="agree">I agree to everything</label>
+        <p> <!--若只能讓使用者選擇一個就必須name相同，不然就是複選-->
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m">
+        </p>
+
+        <!--下拉式選單-->
+        <p>
+            <label for="meal">Pleace Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <!--範圍-->
+        <label for="cheese">Amount of Cheese</label>
+        <input type="range" name="cheese_level" id="cheese" min="0" max="10" value="5"> <!--value是預設-->
+        </p>
+
+        <!--一個給使用者打字的地方-->
+        <p>
+            <label for="requests">Any Special Requests? </label>
+            <br>
+            <textarea name="requests?" id="requests" rows="10" cols="40" placeholder="Type something here"></textarea>
+        </p>
+        <button>submit</button>
+    </form>
+
+
+    <h2>Validaitons Demo</h2>
+    <form action="/dummy">
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required> <!--required是不能為空值-->
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" minlength="4" maxlength="10" required>
+        </p>
+        <button>submit</button>
+    </form>
+
+</html>

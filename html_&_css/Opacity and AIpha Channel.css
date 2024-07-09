@@ -1,0 +1,24 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.7)
+        /*rgba的a表透明度，0(0%無)到1(100%有)，
+        且其他元素不受影響，只有單單背景受影響*/
+}
+
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.3;
+    /*opacity表不透明度，跟上面相反，
+    0(100%有)到1(0%無)，但使用opacity時，
+    其他元素都會跟著受影響*/
+}

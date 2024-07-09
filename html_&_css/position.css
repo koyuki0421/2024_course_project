@@ -1,0 +1,53 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+#middle {
+    background-color: #81b29a;
+}
+
+#static #middle {
+    position: static;
+    /*static表靜態的，也是html的預設*/
+    top: 100px;
+    /*top不會有用，因為position是靜態的*/
+}
+
+
+#relative #middle {
+    position: relative;
+    /*relative表相對的，跟原本位子的相對位子*/
+    top: 50px;
+    left: 50px;
+    /*上面皆有效*/
+}
+
+
+#absolute {
+    position: relative;
+}
+
+#absolute #middle {
+    position: absolute;
+    /*absolute表絕對的，會根據父子集移動，
+    若沒有父子集就根據網頁左上角來進行移動，
+    這邊的父子集是上面的#absolute，且absolute不佔原本位子的空間*/
+    top: 1px;
+    left: 1px;
+}
+
+
+#fixed #middle {
+    position: fixed;
+    /*fixed表固定的，會根據頁面左上角進行移動，
+    且不佔原本位子的空間，在滾動頁面時也會跟著，
+    有點像excel的固定標題列*/
+    top: 0;
+    left: 800px;
+}

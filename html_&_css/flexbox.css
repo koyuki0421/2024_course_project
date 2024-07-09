@@ -1,0 +1,106 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    /*flex的預設是由左到右、橫向排列*/
+
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /*一樣是橫向，但變成由右到左；
+    若是column是直向；還有column-reverse*/
+
+    justify-content: center;
+    /*若是flex-end就會往右邊靠齊；
+    space-between就會在元素之前平均分配空間*/
+
+    /* flex-wrap: wrap; */
+    /*wrap是包裝的意思，當flex-direction:column時，
+    為了不讓背景的500px壓到div的200px*/
+
+    /* align-items: flex-start; */
+    /*想要保持justify-content:center，
+    也想要靠著底部的話：flex-end*/
+    /* align-content: space-between; */
+    /*對齊的意思*/
+}
+
+
+#container div {
+    width: 200px;
+    height: 200px;
+    /* max-width: 300px; */
+    /*可以設定最大跟對小的寬度*/
+    /* text-align: center;*/
+    flex-basis: 600px;
+    /*是根據主軸進行變化的，(row或column)*/
+    /* flex-grow: 1; */
+}
+
+/* div:nth-of-type(2) {
+    align-self: center;
+    /*單獨挑一個元素出來對齊*/
+/* } */
+
+
+/* div:nth-of-type(3) {
+    align-self: flex-end;
+    /*單獨挑一個元素出來對齊*/
+/* } */
+
+div:nth-of-type(1) {
+    flex-grow: 1;
+    flex-shrink: 2;
+    /*表相對於其他元素，要縮小多少比例的概念*/
+}
+
+
+div:nth-of-type(5) {
+    flex-grow: 2;
+    /*讓第五個元素吃掉多餘的空間*/
+
+    /* flex-shrink: 0; */
+    /*表不要讓第五個元素縮小*/
+}
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: #6930c3;
+    border: 2px solid white;
+    /* flex: 2; */
+    /*表flex-grow*/
+
+    /* flex: 2 300px; */
+    /*表flex-grow、flex-basis*/
+
+    flex: 1 2 300px;
+    /*flex-grow、flex-shrink、flex-basis*/
+
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    /* flex: 1; */
+    /* flex: 1 600px; */
+    flex: 2 1 800px;
+}

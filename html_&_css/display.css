@@ -1,0 +1,49 @@
+/* h1 {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    display: inline;
+    inline表示像span一樣，文字多長就多長，不會佔滿網頁的全部
+} */
+
+/* span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    display: block;
+    block表示變成佔滿整個網頁的全部，像h1一樣
+}  */
+
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+    /*width沒用、padding有用但沒推開字、
+    margin只有左右有用，上下沒有用，
+    因為是inline因為是span*/
+
+}
+
+h1 {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    width: 300px;
+    padding: 50px;
+    margin: 100px;
+    /*以上每個都有用，因為是block因為是h1*/
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    display: inline-block;
+    /*把inline跟block的特性都擁有，
+    因為div本身是占據整個網頁的，像block一樣，
+    所以只用inline的話，width跟height沒有用*/
+    margin: 50px;
+}
+
+/*讓元素從網頁上消失，但在程式裡是有的：
+display:none;*/

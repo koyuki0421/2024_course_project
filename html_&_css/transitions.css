@@ -1,0 +1,58 @@
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+    /* transition: 1s; */
+    /*transition表過渡(動畫的一種)，1s表秒鐘*/
+
+    /* transition: background-color 3s; */
+    /*上面表只有背景顏色是3秒鐘轉換，不包括形狀*/
+
+    /* transition: background-color 3s 1s; */
+    /*上面表背景顏色是3秒鐘轉換，且背景顏色轉換時間delay1秒鐘*/
+
+    /* transition: all 3s 1s; */
+    /*上面表所有的元素都是3秒鐘轉換，且轉換時間delay1秒鐘*/
+
+    transition: background-color 1s ease-in, border-radius 2s;
+    /*表顏色轉換1秒鐘，邊界轉換2秒鐘*/
+}
+
+.circle:hover {
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+
+section div {
+    height: 100px;
+    width: 100px;
+    background-color: turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:hover div {
+    margin-left: 500px;
+    /*當我滑鼠碰到div的時候，有3秒鐘的時間往左邊移動500px*/
+}
+
+div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+    /*ease-in表一開始然後漸漸加速*/
+}
+
+
+
+div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+    /*ease-out表一開始快然後漸漸變慢*/
+}
+
+div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}

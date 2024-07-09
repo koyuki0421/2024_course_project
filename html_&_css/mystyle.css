@@ -1,0 +1,37 @@
+/* rgb語法:(red green blue)最小0最大255*/
+/* Hex語法:(前兩個:r  中間兩個:g  最後兩個:b) 最小0最大ff */
+
+h1 {
+    color: darkcyan;
+    text-align: center;
+    /* 對齊 */
+    font-weight: normal;
+    /*字的粗細*/
+    text-decoration: orange underline wavy;
+    /*底線*/
+    letter-spacing: 10px;
+    /*字的寬度*/
+    font-size: 60px;
+    /*字的大小*/
+    font-family: Big Caslon, Courier New;
+    /*改變字體:首選 備1 備2...等*/
+}
+
+h2 {
+    color: #712DB5;
+    background-color: rgb(192, 192, 57);
+}
+
+button {
+    color: rgb(26, 130, 12);
+    background-color: blue;
+}
+
+p {
+    color: salmon;
+    background-color: rgb(32, 147, 109);
+    line-height: 2;
+    /*行高*/
+}
+
+;

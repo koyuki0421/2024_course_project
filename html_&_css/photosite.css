@@ -1,0 +1,21 @@
+img {
+    width: 30%;
+    /*用%比用px的好處：可以隨整頁面大小去做應對，不會死死的就是30px*/
+
+    /* margin: 1.66666%; */
+    margin: calc(10%/6);
+    /*算數學：每張photo30%，已有了90%，剩10%去做排版，
+    10%中有6個margin要平分*/
+}
+
+nav {
+    /*nav表"導航"*/
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: calc(10%/6);
+    padding: 1.2em 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    /*用em的好處：改自大小時，padding也會自動更改*/
+}
