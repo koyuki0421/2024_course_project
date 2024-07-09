@@ -20,3 +20,29 @@ for (let i = 1; i <= 151; i++) {
     container.appendChild(pokemon)
     // 把div放進container裡面
 }
+
+const button = document.querySelector('button[type="button"]');
+
+const changecolor = () => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return { r, g, b };
+}
+
+button.addEventListener("click", function () {
+    const { r, g, b } = changecolor();
+    const newcolor = `rgb(${r}, ${g}, ${b})`;
+    document.body.style.backgroundColor = newcolor;
+
+    const labels = document.querySelectorAll('.pokemon span');
+    const rgbSum = r + g + b;
+
+    labels.forEach(label => {
+        if (rgbSum < 350) {
+            label.style.color = 'white';
+        } else {
+            label.style.color = 'black';
+        }
+    });
+});

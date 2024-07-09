@@ -3,9 +3,18 @@ body {
     background-color: rgb(245, 246, 238);
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    /* 控制 h1 和按钮之间的间距 */
+}
+
 h1 {
     text-align: center;
     color: red;
+    margin-right: 10px;
 }
 
 #container {
