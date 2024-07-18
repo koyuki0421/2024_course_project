@@ -49,6 +49,14 @@ app.get('/r/:subreddit/:postId', (req, res) => {
     const { subreddit, postId } = req.params;
     res.send(`<h1>hi this is PostID:${postId} on the ${subreddit}</h1>`)
 })
+// 這邊的url是：http://localhost:3000/search?q=cats，後面的?q=要查的東西
+app.get('/search', (req, res) => {
+    const { q } = req.query;
+    if (!q) {
+        res.send("Nothing found if nothing serch!!!")
+    }
+    res.send(`<h1>Search results for:${q}</h1>`)
+})
 
 app.get('*', (req, res) => {
     res.send(`I don't know this routing~~!`)
