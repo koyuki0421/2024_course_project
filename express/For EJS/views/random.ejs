@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+</head>
+
+<body>
+    <h1>My random number is :<%= rand %>
+    </h1>
+    <% if (rand %2===0){ %>
+        <h2>That is an even number!</h2>
+        <%}else{%>
+            <h2>That is an odd number!</h2>
+            <%}%>
+                <!-- 只寫<% %>的話，只會把邏輯給網站而已，不會像<%= %>一樣嵌入進去網站上 -->
+                <h3>That number is : <%= rand%2===0 ? 'EVEN' : 'ODD' %>
+                </h3>
+                <!-- 這種寫法的意思分析是 rand除以2剛好等於0 嗎 是的話就是EVEN 否則 就是ODD  -->
+</body>
+
+</html>
