@@ -1,0 +1,33 @@
+<!-- 這是把共用的head放到另一個資料夾裡並變成ejs檔案後 -->
+<!-- 再用下面這行程式碼進行引用'路徑'，共同使用bootstrap -->
+<%- include('partials/head')%>
+
+
+    <!-- 下面同上邏輯，共同使用navbar -->
+    <%- include('partials/navbar')%>
+
+        <div class="container">
+            <h1>Browsing the <%= name %> subrebbit</h1>
+            <h2>
+                <%= description %>
+            </h2>
+            <p>
+                <%= subscribers%> Total subscribers
+            </p>
+            <hr>
+            <% for(let post of posts){ %>
+                <article>
+                    <p>
+                        <%= post.title%> - <b>
+                                <%= post.author%>
+                            </b>
+                    </p>
+                    <% if(post.img){ %>
+                        <img src="<%= post.img %>" alt="">
+                        <% } %>
+
+                </article>
+                <% } %>
+        </div>
+
+        <%- include('partials/footer')%>
