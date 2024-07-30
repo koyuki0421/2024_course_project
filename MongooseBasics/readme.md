@@ -32,7 +32,7 @@ Mongoose 是一個 Mongo 的驅動程式，也是一種 ODM (Object Data Mapper 
    ```
    node index.js
    ```
-   或者在 Node.js 互動式控制台使用 `.load index.js` 加載檔案。
+   再打 `.load index.js` 加載檔案。
 
 2. 創建物件，例如：
    ```javascript
