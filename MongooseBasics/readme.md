@@ -28,19 +28,28 @@ Mongoose 是一個 Mongo 的驅動程式，也是一種 ODM (Object Data Mapper 
    ```
 
 ## 在 VS Code JS 檔案裡創建的資料
+   ```javascript
+      const amadeus = new Movie({ title: 'Amadeus', year: 1984 });
+   ```
 1. 使用 Node.js 執行：
    ```
    node index.js
    ```
    再打 `.load index.js` 加載檔案。
 
-2. 創建物件，例如：
-   ```javascript
-   const amadeus = new Movie({ title: 'Amadeus', year: 1984 });
+2. 查看創建物件，例如：
+   ```
+   amadeus 
+   ```
+
+
+## 要把資料存到資料庫裏面:
+1. 先.save()：
+   ```
    amadeus.save(); // 將資料存到資料庫裏面
    ```
 
-3. 在 `mongosh` 中使用：
+2. 再開啟 mongosh 並use當前資料庫 再.find()查詢，以確認資料進入資料庫中：
    ```
    use movieApp
    db.movies.find() // 這邊的 movies 是根據模型名稱 (Movie 大寫單數)，在 mongosh 中會變成小寫複數
