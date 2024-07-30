@@ -1,7 +1,7 @@
 
 # Mongoose
 
-## Express Node Mongo
+## Node Mongo
 Mongoose 是一個 Mongo 的驅動程式，也是一種 ODM (Object Data Mapper or Object Document Mapper)，用於將 Mongo 連接到 Node.js 上（連接到 Mongo 資料庫上）。
 
 ## 下載步驟
