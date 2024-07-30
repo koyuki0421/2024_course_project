@@ -108,3 +108,20 @@ Movie.findOneAndUpdate({ title: 'The Iron Giant' }, { score: 7.8 }, { new: true 
 ```javascript
 Movie.findByIdAndUpdate('66a76320aaa9bf4a176f31a1', { score: 8.2 }, { new: true }).then(m => console.log(m));
 ```
+
+## 刪除
+
+### 只刪除一個，且有指定
+```javascript
+Movie.remove({title:'Amelie'}.then(msg =>console.log(msg));
+```
+
+### 刪除多個
+```javascript
+Movie.deleteMany({year:{$gte:1999}}).then(msg =>console.log(msg));
+```
+
+### 刪除後，回傳刪除的資料
+```javascript
+Movie.findOneAndDelete({title:'Alien'}).then(m =>console.log(m));
+```
