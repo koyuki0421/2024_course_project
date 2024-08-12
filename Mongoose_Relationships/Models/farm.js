@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+// 記得要加這個'為了使用結構模式'，就是products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]
 
 mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -10,7 +11,8 @@ mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser
         console.log(err)
     })
 
-
+// 原本const productSchema = new mongoose.Schema({...但因使用結構模式，
+// 所以變成const productSchema = new Schema({...
 const productSchema = new Schema({
     name: String,
     price: Number,
