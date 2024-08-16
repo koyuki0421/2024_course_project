@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const flash = require('connect-flash');
 
+// 要加下面這3行
 const sessionOptions = { secret: 'thisisnotagoodsecret', resave: false, saveUninitialized: false }
 app.use(session(sessionOptions));
 app.use(flash());
